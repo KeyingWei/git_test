@@ -10,4 +10,4 @@
 |主控|驻车模块|0x104|2||parking_request(int8_t)|max_parking_current(int8_t)|||||||||
 |主控|英博尔驱动模块|0x305|8||dirving mode and gear|motor_speed>>8(uint16_t)|motor_speed(uint16_t)|driving_acc(uint8_t)|dirving_dec(uint8_t)|0|0|data_checksums|byte0[0:2]:mode<br>(0-manu_mode 1-auto_mode) byte0[3:5]:gear<br>(0-P_Gear,1-N_Gear,2-D_gear,3-R_Gear)|
 |主控|所有模块|0x401|1||module_auto_status(uint8_t)||||||||bit[0]:braking bit[1]:parking bit[2]:steering bit[3]:driving bit[4]:gear bit[5]:light |
-|主控|所有模块|0x2AA|1||0XAA|||||||||
+|主控|所有模块|0x2AA|1||0XAA||||||||该帧用于当转向发送人工干预信息后，主控发送的应答信号|
