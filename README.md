@@ -35,5 +35,5 @@ thank `you` for `call` me `coder`
 [文字超链接](https://github.com/guodongxiaren/README "悬停显示")
 <br>
 * 昵称：wky
-* 性别：男
-* 居住地：广西
+	* 性别：男
+		* 居住地：广西
