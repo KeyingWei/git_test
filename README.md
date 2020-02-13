@@ -47,4 +47,6 @@ thank `you` for `call` me `coder`
 [![baidu]](http://baidu.com)
 [baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"
 
-
+```c
+#include <stdio.h>
+```
