@@ -51,9 +51,9 @@ thank `you` for `call` me `coder`
 |短文本|短文本|短文本|
 |稍长点的文本|短文本|短文本|
 
-~~删除线~~(#index)
+~~删除线~~
 
-我经常去的几个网站[Google][1]、[Leanote][2]以及[自己的博客][3]
+我[经常](#index)去的几个网站[Google][1]、[Leanote][2]以及[自己的博客][3]
 [Leanote 笔记][2]是一个不错的[网站][]。
 [1]:http://www.google.com "Google"
 [2]:http://www.leanote.com "Leanote"
