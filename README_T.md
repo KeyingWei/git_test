@@ -2,6 +2,7 @@
 ========================
 内部控制协议
 ------------------------
+* 主控下发控制帧
 
 |发送节点|接收节点|ID|数据长度|接收超时|byte[0]|byte[1]|byte[2]|byte[3]|byte[4]|byte[5]|byte[6]|byte[7]|备注|
 |----|------|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|-----|-----|
@@ -11,3 +12,8 @@
 |主控|英博尔驱动模块|0x305|8||dirving mode and gear|motor_speed>>8(uint16_t)|motor_speed(uint16_t)|driving_acc(uint8_t)|dirving_dec(uint8_t)|0|0|data_checksums|byte0[0:2]mode:<br>0-manu_mode,<br>1-auto_mode<br>byte0[3:5]gear:<br>0-P_Gear,<br>1-N_Gear,<br>2-D_gear,<br>3-R_Gear|
 |主控|所有模块|0x401|1||module_auto_status(uint8_t)||||||||bit[0]:braking bit[1]:parking bit[2]:steering bit[3]:driving bit[4]:gear bit[5]:light |
 |主控|所有模块|0x2AA|1||0XAA||||||||该帧用于当转向发送人工干预信息后，主控发送的应答信号|
+
+* 模块心跳帧
+|发送节点|接收节点|ID|数据长度|接收超时|byte[0]|byte[1]|byte[2]|byte[3]|byte[4]|byte[5]|byte[6]|byte[7]|备注|
+|----|------|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|-----|-----|
+|刹车模块|主控|0x201|2||brake_speed(uint8_t)|brake_percent(uint8_t)|||||||||
