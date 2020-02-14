@@ -17,4 +17,4 @@
 
 |发送节点|接收节点|ID|数据长度|接收超时|byte[0]|byte[1]|byte[2]|byte[3]|byte[4]|byte[5]|byte[6]|byte[7]|备注|
 |----|------|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|-----|-----|
-|刹车模块|主控|0x201|2||brake_speed(uint8_t)|brake_percent(uint8_t)|||||||||
+|刹车模块|主控|0x201|4||brake_percent(uint8_t)|real_percent(uint8_t)|auto_driver_flag(uint8_t)|error_flag(uint8_t)||||||error_flag[0:3](0-normal,1-error):<br>bit[0]-电机过流错误<br>bit[1]-光电传感器错误<br>bit[2]-电机编码器错误<br>bit[3]-驱动错误|
