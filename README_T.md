@@ -23,3 +23,8 @@
 |英博尔驱动模块|主控|0x306|8||dirving mode and gear|motor_speed>>8(uint16_t)|motor_speed(uint16_t)|driving_acc(uint8_t)|dirving_dec(uint8_t)|motor_temp|error_flag|data_checksums|error_flag:<br>0x2-预充电故障(上电预充不正常),<br>0x3-过流故障<br>0x4-MCU过温故障,<br>0x5-主接触器丢失,<br>0x6-电流传感器故障,<br>0x7-编码器器故障<br>0x8-CAN通讯故障,<br>0x9-母线欠压故障,<br>0xa-母线过压故障,<br>0xb-电机过温故障,<br>0xc-EEPROM读写故障,<br>0xd加速器故障,<br>0xf-电机堵转故障|
 |测电压单元|主控|0x107|6|200ms|0|0|real_speed>>8(int16_t)|real_speed(int16_t)|||||单位：cm/s|
 |测速单元|主控|0x108|6|200ms|real_vlot>>8(uint16_t)|real_vlot(uint16_t)|0|0|||||单位：V|
+
+*异常反馈帧
+|发送节点|接收节点|ID|数据长度|接收超时|byte[0]|byte[1]|byte[2]|byte[3]|byte[4]|byte[5]|byte[6]|byte[7]|备注|
+|----|------|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|-----|-----|
+|转向模块|主控|0x00A|1||0|||||||||
