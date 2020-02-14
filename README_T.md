@@ -19,3 +19,5 @@
 |----|------|-----|-----|-----|-----|-----|-----|----|-----|-----|-----|-----|-----|
 |刹车模块|主控|0x201|4|200ms|brake_percent(uint8_t)|real_percent(uint8_t)|auto_driver_flag(uint8_t)|error_flag(uint8_t)|||||error_flag[0:3]:<br>bit[0]-电机过流错误<br>bit[1]-光电传感器错误<br>bit[2]-电机编码器错误<br>bit[3]-驱动错误|
 |转向模块|主控|0x203|8|500ms|encoder_value(uint32_t)|encoder_value>>8(uint32_t)|encoder_value>>16(uint32_t)|encoder_value>>24(uint32_t)|steering_speed(int16_t)|steering_speed>>8(int16_t)|error_flag|auto_driver_flag|error_flag[0:2]:<br>bit[0]-扭矩传感器自检错误<br>bit[1]-编码器错误<br>bit[2]-电机过流错误|
+|驻车模块|主控|0x204|4|200ms|parking_status(uint8_t)|parking_request(uint8_t)|real_current(uint8_t)|error_flag(uint8_t)|||||error_flag[0:3]:<br>bit[1]-电机过流错误<br>|
+|英博尔驱动模块|主控|0x306|8||dirving mode and gear|motor_speed>>8(uint16_t)|motor_speed(uint16_t)|driving_acc(uint8_t)|dirving_dec(uint8_t)|motor_temp|error_flag|data_checksums|error_flag:<br>0x2-预充电故障(上电预充不正常),<br>0x3-过流故障<br>0x4-MCU过温故障,<br>0x5-主接触器丢失,<br>0x6-电流传感器故障,<br>0x8-CAN通讯故障,<br>0x9-母线欠压故障,<br>0xa-母线过压故障,<br>0xb-电机过温故障,<br>0xc-EEPROM读写故障,<br>0xd加速器故障,<br>0xf-电机堵转故障|
